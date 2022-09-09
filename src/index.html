@@ -1,16 +1,47 @@
 <!DOCTYPE html>
 <html lang="ru">
-	@@include('html/_head.htm',{
-	"title":"Главная"
-	})
-	<body>
-		<div class="wrapper">
-			@@include('html/_header.htm',{})
-			<main class="page">
-			</main>
-			@@include('html/_footer.htm',{})
-		</div>
-		@@include('html/_popup.htm',{})
-		@@include('html/_js.htm',{})
-	</body>
+  @@include('html/_head.htm',{ "title":"Главная" })
+  <body>
+    <div class="wrapper">
+      @@include('html/_header.htm',{})
+      <main class="page">
+        <form class="search-from" action="#" method="post">
+            <div class="search-from__body">
+                <div class="search-from__inner">
+                    Введите трек код затем нажмите Enter
+                    <input autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="" class="search-from__field">
+                </div>
+            </div>
+        </form>
+        <!-- skill -->
+        <!-- ._icon-instagram:before {
+            content: "\e900";
+        }
+        ._icon-telegram:before {
+            content: "\e901";
+        }
+        ._icon-whatsapp:before {
+            content: "\e902";
+        }
+        ._icon-youtube:before {
+            content: "\e903";
+        }
+        ._icon-arrow_long:before {
+            content: "\e904";
+        }
+        ._icon-arrow_medium:before {
+            content: "\e905";
+        }
+        ._icon-arrow_short:before {
+            content: "\e906";
+        }
+        ._icon-check:before {
+            content: "\e907";
+        } -->
+        
+      </main>
+      @@include('html/_footer.htm',{})
+    </div>
+    @@include('html/_popup.htm',{}) @@include('html/_js.htm',{})
+  </body>
 </html>

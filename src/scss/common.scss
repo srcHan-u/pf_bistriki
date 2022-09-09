@@ -18,3 +18,275 @@
     @include adaptiveValue("font-size", 26, 17);
     line-height: math.div(31, 26);
 }
+
+.inner-text-bold {
+    font-weight: 700;
+    &_color_green {
+        color: $mCSpan;
+        font-size: inherit;
+        line-height: inherit;
+    }
+    &_color_blue {
+        color: $mCBlue;
+        font-size: inherit;
+        line-height: inherit;
+    }
+}
+
+.list {
+    &__item {
+    }
+}
+.card-case {
+    background: $mGradient;
+    border-radius: rem(28);
+    // background: #204075;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    min-width: rem(290);
+    padding: rem(24) rem(24) rem(22) rem(24);
+    // height: rem(509);
+    max-width: rem(412);
+    gap: rem(10);
+    // filter: blur(10px);
+    // box-shadow: 10px -10px 10px red;
+    @media (max-width: $tablet) {
+        padding: rem(17) rem(19) rem(15) rem(19);
+    }
+    &__top {
+        width: 100%;
+        text-align: center;
+    }
+
+    &__image-ibg {
+        padding-bottom: percent(291, 356);
+        border-radius: 14px;
+        overflow: hidden;
+        &:not(:last-child) {
+            margin-bottom: rem(25);
+        }
+    }
+
+    &__heading {
+        font-weight: 500;
+        @include adaptiveValue("font-size", 26, 17);
+        line-height: math.div(31, 26);
+        margin-bottom: em(92, 26);
+        max-height: rem(100);
+        overflow-y: auto;
+        @media (max-width: $tablet) {
+            margin-bottom: em(62, 26);
+        }
+    }
+
+    &__bottom {
+        width: 100%;
+        text-align: center;
+    }
+
+    &__serial-number {
+        line-height: math.div(24, 20);
+        color: $mCBlue;
+        word-wrap: break-word;
+        @media (max-width: $tablet) {
+            font-size: rem(13);
+        }
+    }
+}
+
+.card-skill {
+    max-width: rem(312);
+    min-width: rem(290);
+    width: 100%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: rem(10);
+    overflow: hidden;
+    &__body {
+        display: inline-flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: column;
+        padding: rem(10) rem(5);
+        max-width: inherit;
+    }
+
+    &__icon {
+        display: inline-block;
+        max-width: rem(59);
+        min-width: rem(47);
+        height: auto;
+        width: 100%;
+        &:not(:last-child) {
+            margin-bottom: rem(38);
+        }
+        @media (max-width: $tablet) {
+            &:not(:last-child) {
+                margin-bottom: rem(30);
+            }
+        }
+    }
+
+    &__heading {
+        font-weight: 700;
+        @include adaptiveValue("font-size", 36, 28);
+        line-height: math.div(44, 36);
+        color: $mCWhite;
+        word-wrap: break-word;
+        width: 100%;
+        text-align: center;
+        max-height: rem(150);
+        overflow-y: auto;
+        &:not(:last-child) {
+            margin-bottom: em(22, 36);
+        }
+        @media (max-width: $tablet) {
+            &:not(:last-child) {
+                margin-bottom: em(18, 36);
+            }
+        }
+    }
+
+    &__description {
+        text-align: center;
+        word-wrap: break-word;
+        line-height: math.div(29, 20);
+        color: $mCWhite;
+        max-height: rem(220);
+        overflow-y: auto;
+    }
+}
+
+.social-list {
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    row-gap: rem(15);
+    &_w-220 {
+        width: 100%;
+        max-width: rem(220);
+    }
+    &_w-160 {
+        width: 100%;
+        max-width: rem(160);
+    }
+    &_fd-column {
+        flex-direction: column;
+        // gap: rem(15);
+    }
+    &__item {
+        &_bg {
+            flex: 0 0 rem(44);
+        }
+    }
+
+    &__link {
+        width: 100%;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+
+        &::before {
+            color: $mCGray;
+            font-size: rem(30);
+        }
+        &_bg {
+            height: rem(44);
+            border-radius: 12px;
+            background-color: #1b2846;
+            width: rem(44);
+        }
+    }
+    &__icon {
+        max-width: rem(34);
+        width: 100%;
+        overflow: hidden;
+    }
+}
+
+.payment-list {
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    row-gap: rem(10);
+    &_w_217 {
+        width: 100%;
+        max-width: rem(217);
+    }
+    &__item {
+    }
+
+    &__button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__icon {
+        max-width: rem(69);
+        width: 100%;
+        overflow: hidden;
+    }
+}
+
+.logo {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    min-width: rem(135);
+    overflow: hidden;
+    &_w-187 {
+        max-width: rem(187);
+    }
+    > img {
+        width: 100%;
+    }
+}
+
+.search-from {
+    max-width: rem(737);
+    width: 100%;
+    background-color: #1b2846;
+    border-radius: 16px;
+    // min-height: rem(49);
+    display: inline-block;
+    &__body {
+        padding: rem(8) rem(16);
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    &__inner {
+        word-wrap: break-word;
+        font-weight: 400;
+        font-size: rem(22);
+        line-height: math.div(33, 22);
+        color: #586179;
+        position: relative;
+        flex: 0 1 100%;
+    }
+    &__field {
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding-left: rem(10);
+        width: calc(100% - rem(10));
+        height: 100%;
+        background-color: transparent;
+        transition: box-shadow 0.4s ease 0s;
+        border-radius: 16px;
+        color: $mainColor;
+        &:focus {
+            border: none;
+            outline: none;
+            box-shadow: 0px 0px 10px 1px $mainColor;
+            background-color: #1b2846;
+        }
+    }
+}
