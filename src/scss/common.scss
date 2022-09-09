@@ -290,3 +290,122 @@
         }
     }
 }
+
+.submission-form {
+    max-width: rem(808);
+    padding: rem(15);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__body {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        width: 100%;
+        row-gap: rem(23);
+        &:not(:last-child) {
+            margin-bottom: rem(57);
+        }
+    }
+
+    &__label {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: rem(8);
+        padding-bottom: rem(18);
+        border-bottom: 1px solid $mainColor;
+    }
+    &__label-text {
+        font-weight: 500;
+        font-size: rem(18);
+        line-height: math.div(27, 18);
+        color: $mCWhite;
+    }
+    &__field {
+        width: inherit;
+        background-color: #0c1938;
+        color: $mCWhite;
+        transition: box-shadow 0.4s ease 0s;
+        border-radius: 0 16px 16px 0;
+        &:focus {
+            border: none;
+            outline: none;
+            box-shadow: 0px 0px 10px 1px $mainColor;
+        }
+    }
+
+    &__button {
+        max-width: rem(372);
+        padding: rem(calc(48 / 2 - 12)) 0px;
+        // height: rem(48);
+    }
+}
+textarea.submission-form__field {
+    resize: none;
+}
+
+//
+.map {
+    max-width: rem(935);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__inner {
+        position: relative;
+    }
+
+    &__image {
+        > path {
+            @media (any-hover: hover) {
+                &:hover {
+                    fill: red;
+                }
+            }
+        }
+        &_2 {
+            transform: translateY(-20%);
+        }
+        &_3 {
+            transform: scale(1, -1) rotate(22deg);
+        }
+    }
+
+    &__icon-box {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    &__row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        // flex-wrap: wrap;
+    }
+}
+.icon-box-map {
+    &_1 {
+        top: percent(219, 486);
+        left: percent(262, 784);
+    }
+    &_2 {
+        top: percent(94, 486);
+        left: percent(450, 784);
+    }
+    &__name {
+        font-weight: 500;
+        font-size: rem(14);
+        line-height: math.div(17, 14);
+        color: $mCBlue;
+        transform: translateY(10px);
+    }
+
+    &__icon {
+    }
+
+    &__tooltip {
+    }
+}
