@@ -359,12 +359,15 @@ textarea.submission-form__field {
 
     &__image {
         > path {
+            transition: fill 0.4s ease 0s;
             @media (any-hover: hover) {
                 &:hover {
-                    fill: red;
+                    fill: #2c406d;
                 }
             }
         }
+    }
+    &__inner {
         &_2 {
             transform: translateY(-20%);
         }
@@ -383,10 +386,27 @@ textarea.submission-form__field {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        // flex-wrap: wrap;
     }
 }
 .icon-box-map {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @media (any-hover: hover) {
+        &:hover {
+            > .icon-box-map__tooltip {
+                visibility: visible;
+                opacity: 1;
+            }
+            > .icon-box-map__name {
+                font-size: rem(20);
+                background-color: #fff;
+            }
+            > .icon-box-map__icon {
+                transform: translateY(-15px);
+            }
+        }
+    }
     &_1 {
         top: percent(219, 486);
         left: percent(262, 784);
@@ -394,18 +414,88 @@ textarea.submission-form__field {
     &_2 {
         top: percent(94, 486);
         left: percent(450, 784);
+        z-index: 2;
     }
+    &_3 {
+        top: percent(5, 280);
+        left: percent(295, 507);
+        z-index: 2;
+    }
+    &_4 {
+        top: percent(74, 280);
+        left: percent(175, 507);
+    }
+    &_5 {
+        top: percent(74, 452);
+        left: percent(400, 575);
+        transform: scale(-1, 1) rotate(202deg);
+        z-index: 2;
+    }
+    &_6 {
+        top: percent(24, 452);
+        left: percent(220, 575);
+        transform: scale(-1, 1) rotate(202deg);
+    }
+    &_7 {
+        top: percent(200, 452);
+        left: percent(80, 575);
+        transform: scale(-1, 1) rotate(202deg);
+    }
+
     &__name {
         font-weight: 500;
         font-size: rem(14);
         line-height: math.div(17, 14);
         color: $mCBlue;
-        transform: translateY(10px);
+        transform: translate(-50%, 10px);
+        padding: rem(10);
+        border-radius: 20px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 3;
+        transition: background-color 0.4s ease 0s, font-size 0.4s ease 0s;
     }
 
     &__icon {
+        transition: transform 0.4s ease 0s;
+        position: relative;
+        z-index: 1;
     }
 
     &__tooltip {
+        background: #fcfcfc;
+        border-radius: 8px;
+        padding: rem(8);
+        font-size: rem(20);
+        line-height: math.div(29, 20);
+        color: $mCBg;
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        width: rem(380);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: rem(8);
+        opacity: 0;
+        visibility: hidden;
+        transform: translateX(-50%);
+        transition: opacity 1s ease 0s;
+        &::before {
+            color: $mCBlue;
+            font-size: rem(20);
+        }
+        &::after {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: rem(9);
+            height: rem(9);
+            background-color: #fcfcfc;
+            transform: translate(-50%, -50%) rotate(45deg);
+        }
     }
 }
