@@ -395,21 +395,20 @@ textarea.submission-form__field {
     display: flex;
     flex-direction: column;
     align-items: center;
-    @media (any-hover: hover) {
-        &:hover {
-            > .icon-box-map__tooltip {
-                visibility: visible;
-                opacity: 1;
-            }
-            > .icon-box-map__name {
-                font-size: rem(20);
-                background-color: #fff;
-            }
-            > .icon-box-map__icon {
-                transform: translateY(-15px);
-            }
+    &:hover {
+        > .icon-box-map__tooltip {
+            visibility: visible;
+            opacity: 1;
+        }
+        > .icon-box-map__name {
+            font-size: rem(20);
+            background-color: #fff;
+        }
+        > .icon-box-map__icon {
+            transform: translateY(-15px);
         }
     }
+
     &_1 {
         top: percent(219, 486);
         left: percent(262, 784);
@@ -464,6 +463,7 @@ textarea.submission-form__field {
         transition: transform 0.4s ease 0s;
         position: relative;
         z-index: 1;
+        cursor: pointer;
     }
 
     &__tooltip {
