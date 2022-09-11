@@ -1,4 +1,65 @@
 //====================================================================================================
+.header {
+    min-height: rem(140);
+    &__container {
+        position: relative;
+    }
+    &__body {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: rem(15);
+        @include adaptiveValue("padding-top", 76, 88);
+        @media (max-width: $mobileSmall) {
+            flex-direction: column-reverse;
+        }
+    }
+    &__inner {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        flex: 0 1 rem(1057);
+        gap: rem(15);
+        @media (max-width: $tablet) {
+            flex-wrap: wrap;
+        }
+        @media (max-width: $mobileSmall) {
+            flex: none;
+        }
+    }
+    &__logo {
+        @media (max-width: $mobileSmall) {
+            max-width: rem(135);
+        }
+    }
+    &__search-from {
+        flex: 0 1 100%;
+        @media (max-width: $tablet) {
+            flex: 0;
+            @include adaptiveValue("margin-top", 134, 90);
+        }
+    }
+    &__link-number {
+        height: 100%;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        column-gap: rem(25);
+        row-gap: rem(5);
+        flex: 0 0 auto;
+        span {
+            font-weight: 700;
+            font-size: rem(20);
+            line-height: math.div(24, 20);
+        }
+    }
+    &__social-list {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        transform: translateX(100%);
+    }
+}
 
 //====================================================================================================
 
