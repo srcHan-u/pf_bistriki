@@ -366,6 +366,9 @@ textarea.submission-form__field {
                 }
             }
         }
+        &_2 {
+            z-index: 0;
+        }
     }
     &__inner {
         &_2 {
@@ -482,6 +485,7 @@ textarea.submission-form__field {
         visibility: hidden;
         transform: translateX(-50%);
         transition: opacity 1s ease 0s;
+        z-index: 10;
         &::before {
             color: $mCBlue;
             font-size: rem(20);
@@ -498,4 +502,8 @@ textarea.submission-form__field {
             transform: translate(-50%, -50%) rotate(45deg);
         }
     }
+}
+
+#map-2 {
+    z-index: 1;
 }
