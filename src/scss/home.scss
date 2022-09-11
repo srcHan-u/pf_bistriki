@@ -1,3 +1,47 @@
 //====================================================================================================
+.page {
+    &__main-screen {
+        @include adaptiveValue("padding-top", 100, 88);
+    }
+}
+.main-screen {
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__text-box {
+        flex: 0 1 rem(571);
+        min-width: rem(328);
+    }
+
+    &__title {
+        &:not(:last-child) {
+            margin-bottom: em(38, 70);
+        }
+    }
+
+    &__text {
+        @include adaptiveValue("font-size", 26, 16, 1720, 375);
+        line-height: math.div(31, 26);
+        &:not(:last-child) {
+            margin-bottom: em(207, 26);
+        }
+    }
+
+    &__button {
+    }
+
+    &__image {
+        flex: 0 1 rem(744);
+        > img {
+            width: 100%;
+        }
+        @media (max-width: $mobile) {
+            margin-bottom: rem(41);
+        }
+    }
+}
 
 //====================================================================================================

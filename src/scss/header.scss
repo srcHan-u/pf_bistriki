@@ -28,6 +28,7 @@
         }
     }
     &__logo {
+        max-width: rem(187);
         @media (max-width: $mobileSmall) {
             max-width: rem(135);
         }
@@ -58,6 +59,7 @@
         top: 100%;
         right: 0;
         transform: translateX(100%);
+        z-index: 10;
     }
 }
 

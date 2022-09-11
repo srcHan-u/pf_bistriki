@@ -34,6 +34,7 @@
         }
     }
     &__logo {
+        max-width: rem(159);
         &:not(:last-child) {
             margin-bottom: rem(30);
         }
