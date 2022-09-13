@@ -308,3 +308,108 @@
         }
     }
 }
+
+//
+
+.page {
+    &__reviews {
+    }
+}
+.reviews {
+    &__sub-title {
+        &:not(:last-child) {
+            margin-bottom: em(120, 50);
+        }
+    }
+
+    &__body {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+    }
+
+    &__text-box {
+        flex: 0 1 percent(798, 1720);
+    }
+
+    &__slider {
+        flex: 0 0 rem(725);
+        transform: translateX(97px);
+    }
+}
+
+.text-box-reviews {
+    font-family: "Inter";
+    font-weight: 500;
+    @include adaptiveValue("font-size", 18, 12);
+    line-height: math.div(22, 18);
+    color: #71c67f;
+    &__info {
+        &:not(:last-child) {
+            margin-bottom: em(25, 18);
+        }
+    }
+    &__text {
+        font-weight: 400;
+        @include adaptiveValue("font-size", 32, 16);
+        line-height: math.div(46, 32);
+        color: #fcfcfc;
+        &:not(:last-child) {
+            margin-bottom: em(28, 32);
+        }
+    }
+    &__date {
+    }
+}
+.reviews-slider {
+    padding: rem(30);
+    &__wrapper {
+    }
+
+    &__slide {
+        transition: transform 0.4s ease 0s;
+    }
+
+    &__button-prev {
+    }
+
+    &__button-next {
+    }
+    &__pagination {
+    }
+}
+
+.reviews-slider-controls {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: rem(270);
+    width: 100%;
+    min-width: rem(200);
+    transform: translateX(-50%);
+    &__button-next {
+        width: rem(40);
+        height: rem(40);
+        background-color: rgba($color: #fff, $alpha: 0.3);
+        border-radius: 50%;
+    }
+    &__button-prev {
+        width: rem(40);
+        height: rem(40);
+        background-color: rgba($color: #fff, $alpha: 0.3);
+        transform: rotate(180deg);
+        border-radius: 50%;
+    }
+    &__pagination {
+        top: 0;
+        left: 50%;
+        font-weight: 400;
+        font-size: rem(40);
+        line-height: math.div(56, 40);
+        color: #fcfcfc;
+    }
+}

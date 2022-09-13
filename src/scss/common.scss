@@ -535,7 +535,7 @@ textarea.submission-form__field {
 
 //
 
-.mockup {
+.review {
     max-width: rem(408);
     width: 100%;
     // height: rem(770);
@@ -550,7 +550,7 @@ textarea.submission-form__field {
     @media (any-hover: hover) {
         &:hover {
             box-shadow: 0px 0px 30px 15px #1e3566;
-            .mockup__panel {
+            .review__panel {
                 bottom: 0;
                 transition: bottom 0.7s ease 0s;
 
@@ -587,7 +587,7 @@ textarea.submission-form__field {
     }
 }
 
-.panel-mockup {
+.panel-review {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -649,7 +649,7 @@ textarea.submission-form__field {
         align-items: flex-start;
     }
 
-    &__who {
+    &__selected-text {
         font-weight: 600;
         font-size: rem(11);
         line-height: math.div(13, 11);
@@ -657,7 +657,7 @@ textarea.submission-form__field {
         color: rgba(235, 235, 245, 0.6);
     }
 
-    &__name {
+    &__text {
         font-weight: 600;
         font-size: rem(13);
         line-height: math.div(18, 13);

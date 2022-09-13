@@ -39,3 +39,14 @@
     transition: opacity 0.4s ease 0s;
     opacity: 0.5;
 }
+.swiper-slide {
+    // cursor: pointer;
+}
+
+.swiper-slide-next {
+    transform: translateX(-127px) scale(0.86);
+}
+
+.swiper-pagination-total {
+    color: #2f80ed;
+}
