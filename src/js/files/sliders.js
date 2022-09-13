@@ -7,7 +7,7 @@
 // Подключаем слайдер Swiper из node_modules
 // При необходимости подключаем дополнительные модули слайдера, указывая их в {} через запятую
 // Пример: { Navigation, Autoplay }
-import Swiper, { Navigation } from 'swiper';
+import Swiper, { Navigation, EffectFade } from 'swiper';
 /*
 Основниые модули слайдера:
 Navigation, Pagination, Autoplay, 
@@ -27,28 +27,27 @@ import "../../scss/base/swiper.scss";
 function initSliders() {
 	// Перечень слайдеров
 	// Проверяем, есть ли слайдер на стронице
-	if (document.querySelector('.swiper')) { // Указываем скласс нужного слайдера
+	if (document.querySelector('.slider-case')) { // Указываем скласс нужного слайдера
 		// Создаем слайдер
-		new Swiper('.swiper', { // Указываем скласс нужного слайдера
+		new Swiper('.slider-case', { // Указываем скласс нужного слайдера
 			// Подключаем модули слайдера
 			// для конкретного случая
 			modules: [Navigation],
 			observer: true,
 			observeParents: true,
-			slidesPerView: 1,
-			spaceBetween: 0,
-			autoHeight: true,
+			slidesPerView: 4,
+			spaceBetween: 24,
+			autoHeight: false,
 			speed: 800,
 
-			//touchRatio: 0,
-			//simulateTouch: false,
+			touchRatio: 0.5,
+			simulateTouch: true,
 			//loop: true,
 			//preloadImages: false,
-			//lazy: true,
+			lazy: true,
 
 			/*
 			// Эффекты
-			effect: 'fade',
 			autoplay: {
 				delay: 3000,
 				disableOnInteraction: false,
@@ -73,24 +72,19 @@ function initSliders() {
 
 			// Кнопки "влево/вправо"
 			navigation: {
-				prevEl: '.swiper-button-prev',
-				nextEl: '.swiper-button-next',
+				prevEl: '.slider-case__button-prev',
+				nextEl: '.slider-case__button-next',
 			},
 
 			// Брейкпоинты
-			/*
 			breakpoints: {
 				320: {
-					slidesPerView: 1,
-					spaceBetween: 0,
-					autoHeight: true,
+                    slidesPerView: 1.25,
+                    spaceBetween: 17,
+                    // autoHeight: true,
 				},
 				768: {
-					slidesPerView: 2,
-					spaceBetween: 20,
-				},
-				992: {
-					slidesPerView: 3,
+					slidesPerView: 2.5,
 					spaceBetween: 20,
 				},
 				1268: {
@@ -98,7 +92,6 @@ function initSliders() {
 					spaceBetween: 30,
 				},
 			},
-			*/
 			// События
 			on: {
 

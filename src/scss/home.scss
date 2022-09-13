@@ -90,3 +90,76 @@
         }
     }
 }
+
+//
+
+.page {
+    &__possibilities {
+        @include adaptiveValue("padding-bottom", 243, 94);
+    }
+}
+.possibilities {
+    &__container {
+    }
+
+    &__sub-title {
+        &:not(:last-child) {
+            margin-bottom: em(150, 50);
+        }
+        @media (max-width: $mobileSmall) {
+            &:not(:last-child) {
+                margin-bottom: rem(60);
+            }
+        }
+    }
+
+    &__body {
+    }
+    &__list {
+        @include adaptiveValue("padding-bottom", 121, 73);
+        column-gap: rem(15);
+        row-gap: rem(30);
+        @media (max-width: em(700)) {
+            justify-content: center;
+        }
+    }
+}
+
+.slider-case {
+    max-width: rem(1720);
+    width: 100%;
+    position: relative;
+    padding-bottom: rem(80);
+    // margin-bottom: rem(80);
+    height: rem(589);
+    @media (max-width: $mobileSmall) {
+        height: rem(343);
+    }
+
+    &__wrapper {
+    }
+
+    &__slide {
+        // height: 100%;
+    }
+
+    &__button-prev {
+        display: block;
+        width: rem(20);
+        height: rem(20);
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: rotate(180deg) translateX(calc(100% + 33px / 2));
+    }
+
+    &__button-next {
+        display: block;
+        width: rem(20);
+        height: rem(20);
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(calc(100% + 33px / 2));
+    }
+}
