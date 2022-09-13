@@ -4,7 +4,8 @@
   <body>
     <div class="wrapper">
       @@include('html/_header.htm',{})
-      <main class="page">
+      <main class="page" >
+    
         <section class="page__main-screen main-screen">
           <div class="main-screen__container">
             <div class="main-screen__text-box">
@@ -37,7 +38,8 @@
             </div>
           </div>
         </section>
-        <div class="page__about about">
+        <!-- todo fd this section doesn't adapt well -->
+        <!-- <div class="page__about about">
           <div class="about__container">
             <h2 class="about__sub-title sub-title">
               Коротко расскажем о нас и главное честно 🙂
@@ -233,7 +235,8 @@
               </p>
             </div>
           </div>
-        </div>
+        </div> -->
+        <!-- 
         <div class="page__possibilities possibilities">
             <div class="possibilities__container">
                 <h2 class="possibilities__sub-title sub-title">Что мы умеем на примере настоящих <span>з</span></h2>
@@ -379,6 +382,64 @@
                 </div>
             </div>
         </div>
+         -->
+        <div class="page__stages stages">
+            <div class="stages__container">
+                <div class="stages__body">
+                    <div class="stages__text-box">
+                        <h2 class="stages__sub-title">Как у нас заказать</h2>
+                        <a href="#" class="stages__button button button_primary _icon-arrow_medium" data-da=".stages__body, 998"><span>Оставить заявку</span></a>
+                    </div>
+                    <div class="stages__stages-block stages-block">
+                        <ul class="stages-block__list">
+                            <li class="stages-block__item">
+                                <div class="stages-block__icon">
+                                    <span class="stages-block__icon-number">1</span>
+                                </div>
+                                <p class="stages-block__text">Присылаете ссылку на корзину.</p>
+                            </li>
+                            <li class="stages-block__item">
+                                <div class="stages-block__icon">
+                                    <span class="stages-block__icon-number">2</span>
+                                </div>
+                                <p class="stages-block__text">Проверяем из какой страны дешевле доставить.</p>
+                            </li>
+                            <li class="stages-block__item">
+                                <div class="stages-block__icon">
+                                    <span class="stages-block__icon-number">3</span>
+                                </div>
+                                <p class="stages-block__text">Рассчитываем нашу комиссию ( 140 руб. за банку, если банок более 70, то 120 рублей за банку). Комиссия всегда не менее 1300 руб.</p>
+                            </li>
+                            <li class="stages-block__item">
+                                <div class="stages-block__icon">
+                                    <span class="stages-block__icon-number">3</span>
+                                </div>
+                                <p class="stages-block__text">Оплачиваете покупку без доставки. </p>
+                            </li>
+                            <li class="stages-block__item">
+                                <div class="stages-block__icon">
+                                    <span class="stages-block__icon-number">5</span>
+                                </div>
+                                <p class="stages-block__text">Посылка приезжает на склад, ее взвесят и сообщат точную цены доставки.</p>
+                            </li>
+                            <li class="stages-block__item">
+                                <div class="stages-block__icon">
+                                    <span class="stages-block__icon-number">6</span>
+                                </div>
+                                <p class="stages-block__text">Оплачиваете доставку и ждёте ее в РФ 🙂</p>
+                            </li>
+                        </ul>
+                        <div class="stages-block__pagination pagination-stages-block">
+                            <div class="pagination-stages-block__item"></div>
+                            <div class="pagination-stages-block__item"></div>
+                            <div class="pagination-stages-block__item"></div>
+                            <div class="pagination-stages-block__item"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
       </main>
       @@include('html/_footer.htm',{})
     </div>

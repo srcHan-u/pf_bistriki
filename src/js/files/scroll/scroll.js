@@ -126,16 +126,19 @@ export function stickyBlock() {
 		}
 	}
 	function stickyBlockItem(stickyParent, stickyConfig) {
-		const stickyBlockItem = stickyParent.querySelector('[data-sticky-item]');
+        const stickyBlockItem = stickyParent.querySelector('[data-sticky-item]');
 		const headerHeight = stickyConfig.header;
 		const offsetTop = headerHeight + stickyConfig.top;
 		const startPoint = stickyBlockItem.getBoundingClientRect().top + scrollY - offsetTop;
-
+        console.log(startPoint)
+        
 		document.addEventListener("windowScroll", stickyBlockActions);
 		//window.addEventListener("resize", stickyBlockActions);
 
 		function stickyBlockActions(e) {
 			const endPoint = (stickyParent.offsetHeight + stickyParent.getBoundingClientRect().top + scrollY) - (offsetTop + stickyBlockItem.offsetHeight + stickyConfig.bottom);
+            console.log(endPoint)
+
 			let stickyItemValues = {
 				position: "relative",
 				bottom: "auto",
@@ -145,7 +148,7 @@ export function stickyBlock() {
 			}
 			if (!stickyConfig.media || stickyConfig.media < window.innerWidth) {
 				if (offsetTop + stickyConfig.bottom + stickyBlockItem.offsetHeight < window.innerHeight) {
-					if (scrollY >= startPoint && scrollY <= endPoint) {
+                    if (scrollY >= startPoint && scrollY <= endPoint) {
 						stickyItemValues.position = `fixed`;
 						stickyItemValues.bottom = `auto`;
 						stickyItemValues.top = `${offsetTop}px`;
