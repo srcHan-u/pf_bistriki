@@ -328,6 +328,7 @@
         gap: rem(8);
         padding-bottom: rem(18);
         border-bottom: 1px solid $mainColor;
+        text-align: left;
     }
     &__label-text {
         font-weight: 500;
@@ -352,6 +353,10 @@
         max-width: rem(372);
         padding: rem(calc(48 / 2 - 12)) 0px;
         // height: rem(48);
+        @media (max-width:$tablet){
+        padding: rem(calc(48 / 2 - 12)) 0px;
+            
+        }
     }
 }
 textarea.submission-form__field {

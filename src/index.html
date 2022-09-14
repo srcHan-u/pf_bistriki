@@ -440,7 +440,7 @@
             </div>
         </div> -->
 
-        <section class="page__reviews reviews">
+        <!-- <section class="page__reviews reviews">
             <div class="reviews__container">
                 
             
@@ -543,6 +543,101 @@
                 </div>
             </div>
         </div>
+        </section> -->
+        <section class="page__order-form order-form">
+            <div class="order-form__container">
+                <h2 class="order-form__sub-title sub-title">Хотели бы оформить заказ или задать вопрос?</h2>
+                <p class="order-form__text">
+                    Оставьте заявку, мы свяжемся с вами 
+                   <br>
+                    и проконсультируем по любым вопросам 🥰</p>
+                <form class="order-form__form submission-form" action="#" method="post" name="submission-form">
+                    <div class="submission-form__body">
+                      <label class="submission-form__label">
+                        <span class="submission-form__label-text"> Имя </span>
+                        <input
+                          autocomplete="off"
+                          type="text"
+                          name="name"
+                          data-error="Ошибка"
+                          placeholder="Введите имя"
+                          class="submission-form__field"
+                        />
+                      </label>
+                      <label class="submission-form__label">
+                        <span class="submission-form__label-text"> Телефон </span>
+                        <input
+                          autocomplete="off"
+                          type="tel"
+                          name="phone-number"
+                          data-error="Ошибка"
+                          placeholder="Введите телефон"
+                          class="submission-form__field"
+                        />
+                      </label>
+                      <label class="submission-form__label">
+                        <span class="submission-form__label-text">Комментарий</span>
+                        <textarea
+                          class="submission-form__field"
+                          placeholder="Оставьте комментарий"
+                          name="comment"
+                          cols="10"
+                          rows="2"
+                        ></textarea>
+                      </label>
+                      <div class="checkbox checkbox_submission-form">
+                        <input
+                          id="c_1"
+                          data-error="Ошибка"
+                          class="checkbox__input"
+                          type="checkbox"
+                          value="1"
+                          name="form[submission-form]"
+                        />
+                        <label for="c_1" class="checkbox__label"
+                          ><span class="checkbox__text checkbox__text_submission-form"
+                            >Даю согласие на обработку персональных данных</span
+                          ></label
+                        >
+                      </div>
+                    </div>
+                    <button
+                      type="submit"
+                      class="button button_primary submission-form__button _icon-arrow_medium"
+                    >
+                      <span>Отправить</span>
+                    </button>
+                  </form>
+                <ul class="order-form__social-list social-list">
+                    <li class="social-list__item">
+                        <a href="#" class="social-list__link">
+                          <img
+                            class="social-list__icon"
+                            src="@img/svg/instagram.svg"
+                            alt="icon social"
+                          />
+                        </a>
+                      </li>
+                    <li class="social-list__item">
+                      <a href="#" class="social-list__link">
+                        <img
+                          class="social-list__icon"
+                          src="@img/svg/telegram.svg"
+                          alt="icon social"
+                        />
+                      </a>
+                    </li>
+                    <li class="social-list__item">
+                        <a href="#" class="social-list__link">
+                          <img
+                            class="social-list__icon"
+                            src="@img/svg/whatsapp.svg"
+                            alt="icon social"
+                          />
+                        </a>
+                      </li>
+                  </ul>
+            </div>
         </section>
       </main>
       @@include('html/_footer.htm',{})

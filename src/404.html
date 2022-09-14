@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('html/_head.htm',{ "title":"404" })
+  <body>
+    <div class="wrapper">
+      @@include('html/_header.htm',{})
+      <main class="page page_404">
+        <div class="page__404 page-404">
+          <div class="page-404__container">
+            <a href="./index.html" class="button button_primary _icon-arrow_medium"
+              ><span>Вернуться на главную</span></a
+            >
+            <img class="page-404__bg-image" data-src="@img/404/image_404.png" alt="image">
+          </div>
+        </div>
+      </main>
+      @@include('html/_footer.htm',{})
+    </div>
+    @@include('html/_js.htm',{})
+  </body>
+</html>
