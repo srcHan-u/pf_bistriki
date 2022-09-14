@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('html/_head.htm',{ "title":"Спасибо за заявку!" })
+  <body>
+    <div class="wrapper">
+      @@include('html/_header.htm',{})
+      <main class="page page_thanks">
+        <div class="page__thanks page-thanks">
+          <div class="page-thanks__container">
+            <div class="page-thanks__text-box">
+              <h1 class="page-thanks__title title">Cпасибо за заявку!</h1>
+              <p class="page-thanks__text">Давид и Даниил уже спешат помочь 🙂
+                <br>
+                <br>
+                Еще чуть-чуть и Ваш телефон начнет жужжать или приятно звучать =) </p>
+              <a href="./index.html" class="page-thanks__button button button_primary _icon-arrow_medium"
+                ><span>Вернуться на главную</span></a
+              >
+            </div>
+            <img class="page-thanks__bg-image" data-src="@img/thanks/image_1.png" alt="image">
+
+          </div>
+        </div>
+      </main>
+      @@include('html/_footer.htm',{})
+    </div>
+    @@include('html/_js.htm',{})
+  </body>
+</html>
