@@ -2,7 +2,7 @@
 .page {
     &__main-screen {
         @include adaptiveValue("padding-top", 100, 88);
-        @include adaptiveValue("padding-bottom", 242, 80);
+        @include adaptiveValue("padding-bottom", 225, 80);
     }
 }
 .main-screen {
@@ -49,12 +49,13 @@
 
 .page {
     &__about {
-        @include adaptiveValue("padding-bottom", 234, 89);
+        @include adaptiveValue("padding-bottom", 210, 89);
     }
 }
 .about {
     &__container {
         max-width: rem(1850);
+        position: relative;
     }
 
     &__sub-title {
@@ -68,15 +69,18 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        column-gap: rem(30);
         @media (max-width: $tablet) {
             flex-direction: column-reverse;
         }
     }
 
-    &__text-box {
-    }
-
     &__map {
+        flex: 0 1 100%;
+        max-width: rem(955);
+        @media (max-width: $tablet) {
+            flex: none;
+        }
     }
 
     &__text {
@@ -87,7 +91,15 @@
         flex: 0 1 rem(685);
         @media (max-width: $tablet) {
             flex: none;
+            margin-bottom: rem(100);
         }
+    }
+    &__shadow-element {
+        width: percent(1032, 1720);
+        height: percent(1032, 960);
+        top: 0;
+        left: 0;
+        display: none;
     }
 }
 
@@ -95,16 +107,17 @@
 
 .page {
     &__possibilities {
-        @include adaptiveValue("padding-bottom", 243, 94);
+        @include adaptiveValue("padding-bottom", 232, 94);
     }
 }
 .possibilities {
     &__container {
+        position: relative;
     }
 
     &__sub-title {
         &:not(:last-child) {
-            margin-bottom: em(150, 50);
+            margin-bottom: em(140, 50);
         }
         @media (max-width: $mobileSmall) {
             &:not(:last-child) {
@@ -122,6 +135,12 @@
         @media (max-width: em(700)) {
             justify-content: center;
         }
+    }
+    &__shadow-element {
+        top: 70%;
+        left: 10%;
+        width: percent(996, 1720);
+        height: percent(996, 1384);
     }
 }
 
@@ -173,8 +192,7 @@
 }
 .stages {
     &__container {
-        // align-items: center;
-        // margin: auto 0;
+        position: relative;
     }
 
     &__body {
@@ -216,6 +234,12 @@
         }
     }
     &__button {
+    }
+    &__shadow-element {
+        top: 0;
+        right: 100%;
+        width: percent(996, 1720);
+        height: percent(996, 1072);
     }
 }
 .stages-block {
@@ -313,6 +337,7 @@
 
 .page {
     &__reviews {
+        @include adaptiveValue("padding-bottom", 235, 103);
     }
 }
 .reviews {
@@ -327,15 +352,27 @@
         justify-content: space-between;
         align-items: center;
         position: relative;
+        overflow-x: hidden;
+        @media (max-width: $tablet) {
+            flex-direction: column;
+        }
     }
 
     &__text-box {
         flex: 0 1 percent(798, 1720);
+        @media (max-width: $tablet) {
+            flex: 0;
+        }
     }
 
     &__slider {
-        flex: 0 0 rem(725);
+        flex: 0 1 percent(785, 1720);
         transform: translateX(97px);
+        @media (max-width: $tablet) {
+            flex: 0;
+            min-width: 0;
+            width: 750px;
+        }
     }
 }
 
@@ -369,6 +406,10 @@
 
     &__slide {
         transition: transform 0.4s ease 0s;
+    }
+    &__slide.swiper-slide-next {
+        transform: scale(0.86);
+        // translateX(-127px)
     }
 
     &__button-prev {
@@ -423,6 +464,7 @@
 .order-form {
     &__container {
         text-align: center;
+        position: relative;
     }
 
     &__sub-title {
@@ -452,5 +494,11 @@
     &__social-list {
         margin: 0 auto;
         column-gap: rem(20);
+    }
+    &__shadow-element {
+        top: 0;
+        right: 90%;
+        width: percent(932, 1720);
+        height: percent(932, 824);
     }
 }

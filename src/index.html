@@ -4,9 +4,8 @@
   <body>
     <div class="wrapper">
       @@include('html/_header.htm',{})
-      <main class="page" >
-    
-        <section class="page__main-screen main-screen">
+      <main class="page">
+        <!-- <section class="page__main-screen main-screen">
           <div class="main-screen__container">
             <div class="main-screen__text-box">
               <h1 class="main-screen__title title">
@@ -37,10 +36,11 @@
               <img data-src="@img/home/main-screen_1.png" alt="image" />
             </div>
           </div>
-        </section>
+        </section> -->
         <!-- todo fd this section doesn't adapt well -->
-        <!-- <div class="page__about about">
+        <div class="page__about about">
           <div class="about__container">
+            <div class="about__shadow-element shadow-element"></div>
             <h2 class="about__sub-title sub-title">
               Коротко расскажем о нас и главное честно 🙂
             </h2>
@@ -120,7 +120,7 @@
                     </p>
                   </div>
                 </div>
-                <div class="map__row map__row_2">
+                <div class="map__row">
                   <div class="map__inner map__inner_3">
                     <svg
                       class="map__image map__image_3"
@@ -231,414 +231,551 @@
                 <br />
                 <br />
                 Лично будете общаться с добрым Давидом и очень быстрым Даниилом
-                🚀 <span class="inner-text-bold inner-text-bold_color_blue">(заказ оформляет за 2-5 мин)</span> 
+                🚀
+                <span class="inner-text-bold inner-text-bold_color_blue"
+                  >(заказ оформляет за 2-5 мин)</span
+                >
               </p>
             </div>
           </div>
-        </div> -->
-        <!-- 
-        <div class="page__possibilities possibilities">
-            <div class="possibilities__container">
-                <h2 class="possibilities__sub-title sub-title">Что мы умеем на примере настоящих <span>з</span></h2>
-                <div class="possibilities__body">
-                    <ul class="possibilities__list list">
-                        <li class="list__item">
-                          <div class="card-skill">
-                            <div class="card-skill__body">
-                              <img
-                                class="card-skill__icon"
-                                data-src="@img/svg/_icon-case_1.svg"
-                                alt="image"
-                              />
-                              <h3 class="card-skill__heading">Доставлять</h3>
-                              <p class="card-skill__description">
-                                Помощь в организации сложной логистики
-                              </p>
-                            </div>
-                          </div>
-                        </li>
-                        <li class="list__item">
-                          <div class="card-skill">
-                            <div class="card-skill__body">
-                              <img
-                                class="card-skill__icon"
-                                data-src="@img/svg/_icon-case_2.svg"
-                                alt="image"
-                              />
-                              <h3 class="card-skill__heading">Оплачивать</h3>
-                              <p class="card-skill__description">
-                                Оплата заказов, отелей, билетов, сервисов, подписок...
-                              </p>
-                            </div>
-                          </div>
-                        </li>
-                        <li class="list__item">
-                          <div class="card-skill">
-                            <div class="card-skill__body">
-                              <img
-                                class="card-skill__icon"
-                                data-src="@img/svg/_icon-case_3.svg"
-                                alt="image"
-                              />
-                              <h3 class="card-skill__heading">Экономить</h3>
-                              <p class="card-skill__description">
-                                Умеем находить дешевле в хороших магазинах с отзывами
-                              </p>
-                            </div>
-                          </div>
-                        </li>
-                        <li class="list__item">
-                          <div class="card-skill">
-                            <div class="card-skill__body">
-                              <img
-                                class="card-skill__icon"
-                                data-src="@img/svg/_icon-case_4.svg"
-                                alt="image"
-                              />
-                              <h3 class="card-skill__heading">Помогать</h3>
-                              <p class="card-skill__description">
-                                Если у Вас не стандартная задача, то постараемся помочь
-                              </p>
-                            </div>
-                          </div>
-                        </li>
-                      </ul>
-                      <div class="possibilities__slider slider-case swiper">
-                        <div class="slider-case__wrapper swiper-wrapper">
-                            <div class="slider-case__slide swiper-slide">
-                                <div class="card-case">
-                                    <div class="card-case__top">
-                                      <div class="card-case__image-ibg">
-                                        <img data-src="@img/home/card-image_1.png" alt="image" />
-                                      </div>
-                                      <h4 class="card-case__heading">Большой заказ с iHerb</h4>
-                                    </div>
-                                    <div class="card-case__bottom">
-                                      <div class="card-case__serial-number">11.44.6643</div>
-                                    </div>
-                                  </div>
-                            </div>
-                            <div class="slider-case__slide swiper-slide">
-                                <div class="card-case">
-                                    <div class="card-case__top">
-                                      <div class="card-case__image-ibg">
-                                        <img data-src="@img/home/card-image_2.png" alt="image" />
-                                      </div>
-                                      <h4 class="card-case__heading">Большой заказ с iHerb</h4>
-                                    </div>
-                                    <div class="card-case__bottom">
-                                      <div class="card-case__serial-number">11.44.6643</div>
-                                    </div>
-                                  </div>
-                            </div>
-                            <div class="slider-case__slide swiper-slide">
-                                <div class="card-case">
-                                    <div class="card-case__top">
-                                      <div class="card-case__image-ibg">
-                                        <img data-src="@img/home/card-image_3.png" alt="image" />
-                                      </div>
-                                      <h4 class="card-case__heading">Заказали много БАДов, мы прислали в коробке</h4>
-                                    </div>
-                                    <div class="card-case__bottom">
-                                      <div class="card-case__serial-number">11.44.6643</div>
-                                    </div>
-                                  </div>
-                            </div>
-                            <div class="slider-case__slide swiper-slide">
-                                <div class="card-case">
-                                    <div class="card-case__top">
-                                      <div class="card-case__image-ibg">
-                                        <img data-src="@img/home/card-image_4.png" alt="image" />
-                                      </div>
-                                      <h4 class="card-case__heading">Посылочка</h4>
-                                    </div>
-                                    <div class="card-case__bottom">
-                                      <div class="card-case__serial-number">11.44.6643</div>
-                                    </div>
-                                  </div>
-                            </div>
-                            <div class="slider-case__slide swiper-slide">
-                                <div class="card-case">
-                                    <div class="card-case__top">
-                                      <div class="card-case__image-ibg">
-                                        <img data-src="@img/home/card-image_1.png" alt="image" />
-                                      </div>
-                                      <h4 class="card-case__heading">Большой заказ с iHerb</h4>
-                                    </div>
-                                    <div class="card-case__bottom">
-                                      <div class="card-case__serial-number">11.44.6643</div>
-                                    </div>
-                                  </div>
-                            </div>
-                        </div>
-                        <button type="button" class="slider-case__button-prev _icon-arrow_long"></button>
-                        <button type="button" class="slider-case__button-next _icon-arrow_long"></button>
-                      </div>
-                      <div class="some__slider swiper">
-                        <div class="some__wrapper swiper-wrapper">
-                            <div class="some__slide swiper-slide"></div>
-                        </div>
-                      </div>
-                </div>
-            </div>
         </div>
-         -->
-        <!-- <div class="page__stages stages">
-            <div class="stages__container">
-                <div class="stages__body">
-                    <div class="stages__text-box">
-                        <h2 class="stages__sub-title">Как у нас заказать</h2>
-                        <a href="#" class="stages__button button button_primary _icon-arrow_medium" data-da=".stages__body, 998"><span>Оставить заявку</span></a>
+
+        <!-- <div class="page__possibilities possibilities">
+          <div class="possibilities__container">
+            <div class="possibilities__shadow-element shadow-element"></div>
+            <h2 class="possibilities__sub-title sub-title">
+              Что мы умеем на примере настоящих <span>з</span>
+            </h2>
+            <div class="possibilities__body">
+              <ul class="possibilities__list list">
+                <li class="list__item">
+                  <div class="card-skill">
+                    <div class="card-skill__body">
+                      <img
+                        class="card-skill__icon"
+                        data-src="@img/svg/_icon-case_1.svg"
+                        alt="image"
+                      />
+                      <h3 class="card-skill__heading">Доставлять</h3>
+                      <p class="card-skill__description">
+                        Помощь в организации сложной логистики
+                      </p>
                     </div>
-                    <div class="stages__stages-block stages-block">
-                        <ul class="stages-block__list">
-                            <li class="stages-block__item">
-                                <div class="stages-block__icon">
-                                    <span class="stages-block__icon-number">1</span>
-                                </div>
-                                <p class="stages-block__text">Присылаете ссылку на корзину.</p>
-                            </li>
-                            <li class="stages-block__item">
-                                <div class="stages-block__icon">
-                                    <span class="stages-block__icon-number">2</span>
-                                </div>
-                                <p class="stages-block__text">Проверяем из какой страны дешевле доставить.</p>
-                            </li>
-                            <li class="stages-block__item">
-                                <div class="stages-block__icon">
-                                    <span class="stages-block__icon-number">3</span>
-                                </div>
-                                <p class="stages-block__text">Рассчитываем нашу комиссию ( 140 руб. за банку, если банок более 70, то 120 рублей за банку). Комиссия всегда не менее 1300 руб.</p>
-                            </li>
-                            <li class="stages-block__item">
-                                <div class="stages-block__icon">
-                                    <span class="stages-block__icon-number">3</span>
-                                </div>
-                                <p class="stages-block__text">Оплачиваете покупку без доставки. </p>
-                            </li>
-                            <li class="stages-block__item">
-                                <div class="stages-block__icon">
-                                    <span class="stages-block__icon-number">5</span>
-                                </div>
-                                <p class="stages-block__text">Посылка приезжает на склад, ее взвесят и сообщат точную цены доставки.</p>
-                            </li>
-                            <li class="stages-block__item">
-                                <div class="stages-block__icon">
-                                    <span class="stages-block__icon-number">6</span>
-                                </div>
-                                <p class="stages-block__text">Оплачиваете доставку и ждёте ее в РФ 🙂</p>
-                            </li>
-                        </ul>
-                        <div class="stages-block__pagination pagination-stages-block">
-                            <div class="pagination-stages-block__item"></div>
-                            <div class="pagination-stages-block__item"></div>
-                            <div class="pagination-stages-block__item"></div>
-                            <div class="pagination-stages-block__item"></div>
+                  </div>
+                </li>
+                <li class="list__item">
+                  <div class="card-skill">
+                    <div class="card-skill__body">
+                      <img
+                        class="card-skill__icon"
+                        data-src="@img/svg/_icon-case_2.svg"
+                        alt="image"
+                      />
+                      <h3 class="card-skill__heading">Оплачивать</h3>
+                      <p class="card-skill__description">
+                        Оплата заказов, отелей, билетов, сервисов, подписок...
+                      </p>
+                    </div>
+                  </div>
+                </li>
+                <li class="list__item">
+                  <div class="card-skill">
+                    <div class="card-skill__body">
+                      <img
+                        class="card-skill__icon"
+                        data-src="@img/svg/_icon-case_3.svg"
+                        alt="image"
+                      />
+                      <h3 class="card-skill__heading">Экономить</h3>
+                      <p class="card-skill__description">
+                        Умеем находить дешевле в хороших магазинах с отзывами
+                      </p>
+                    </div>
+                  </div>
+                </li>
+                <li class="list__item">
+                  <div class="card-skill">
+                    <div class="card-skill__body">
+                      <img
+                        class="card-skill__icon"
+                        data-src="@img/svg/_icon-case_4.svg"
+                        alt="image"
+                      />
+                      <h3 class="card-skill__heading">Помогать</h3>
+                      <p class="card-skill__description">
+                        Если у Вас не стандартная задача, то постараемся помочь
+                      </p>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+              <div class="possibilities__slider slider-case swiper">
+                <div class="slider-case__wrapper swiper-wrapper">
+                  <div class="slider-case__slide swiper-slide">
+                    <div class="card-case">
+                      <div class="card-case__top">
+                        <div class="card-case__image-ibg">
+                          <img
+                            data-src="@img/home/card-image_1.png"
+                            alt="image"
+                          />
                         </div>
+                        <h4 class="card-case__heading">
+                          Большой заказ с iHerb
+                        </h4>
+                      </div>
+                      <div class="card-case__bottom">
+                        <div class="card-case__serial-number">11.44.6643</div>
+                      </div>
                     </div>
+                  </div>
+                  <div class="slider-case__slide swiper-slide">
+                    <div class="card-case">
+                      <div class="card-case__top">
+                        <div class="card-case__image-ibg">
+                          <img
+                            data-src="@img/home/card-image_2.png"
+                            alt="image"
+                          />
+                        </div>
+                        <h4 class="card-case__heading">
+                          Большой заказ с iHerb
+                        </h4>
+                      </div>
+                      <div class="card-case__bottom">
+                        <div class="card-case__serial-number">11.44.6643</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="slider-case__slide swiper-slide">
+                    <div class="card-case">
+                      <div class="card-case__top">
+                        <div class="card-case__image-ibg">
+                          <img
+                            data-src="@img/home/card-image_3.png"
+                            alt="image"
+                          />
+                        </div>
+                        <h4 class="card-case__heading">
+                          Заказали много БАДов, мы прислали в коробке
+                        </h4>
+                      </div>
+                      <div class="card-case__bottom">
+                        <div class="card-case__serial-number">11.44.6643</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="slider-case__slide swiper-slide">
+                    <div class="card-case">
+                      <div class="card-case__top">
+                        <div class="card-case__image-ibg">
+                          <img
+                            data-src="@img/home/card-image_4.png"
+                            alt="image"
+                          />
+                        </div>
+                        <h4 class="card-case__heading">Посылочка</h4>
+                      </div>
+                      <div class="card-case__bottom">
+                        <div class="card-case__serial-number">11.44.6643</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="slider-case__slide swiper-slide">
+                    <div class="card-case">
+                      <div class="card-case__top">
+                        <div class="card-case__image-ibg">
+                          <img
+                            data-src="@img/home/card-image_1.png"
+                            alt="image"
+                          />
+                        </div>
+                        <h4 class="card-case__heading">
+                          Большой заказ с iHerb
+                        </h4>
+                      </div>
+                      <div class="card-case__bottom">
+                        <div class="card-case__serial-number">11.44.6643</div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
+                <button
+                  type="button"
+                  class="slider-case__button-prev _icon-arrow_long"
+                ></button>
+                <button
+                  type="button"
+                  class="slider-case__button-next _icon-arrow_long"
+                ></button>
+              </div>
+              <div class="some__slider swiper">
+                <div class="some__wrapper swiper-wrapper">
+                  <div class="some__slide swiper-slide"></div>
+                </div>
+              </div>
             </div>
+          </div>
+        </div> -->
+
+        <!-- <div class="page__stages stages">
+          <div class="stages__container">
+            <div class="stages__shadow-element shadow-element"></div>
+
+            <div class="stages__body">
+              <div class="stages__text-box">
+                <h2 class="stages__sub-title">Как у нас заказать</h2>
+                <a
+                  href="#"
+                  class="stages__button button button_primary _icon-arrow_medium"
+                  data-da=".stages__body, 998"
+                  ><span>Оставить заявку</span></a
+                >
+              </div>
+              <div class="stages__stages-block stages-block">
+                <ul class="stages-block__list">
+                  <li class="stages-block__item">
+                    <div class="stages-block__icon">
+                      <span class="stages-block__icon-number">1</span>
+                    </div>
+                    <p class="stages-block__text">
+                      Присылаете ссылку на корзину.
+                    </p>
+                  </li>
+                  <li class="stages-block__item">
+                    <div class="stages-block__icon">
+                      <span class="stages-block__icon-number">2</span>
+                    </div>
+                    <p class="stages-block__text">
+                      Проверяем из какой страны дешевле доставить.
+                    </p>
+                  </li>
+                  <li class="stages-block__item">
+                    <div class="stages-block__icon">
+                      <span class="stages-block__icon-number">3</span>
+                    </div>
+                    <p class="stages-block__text">
+                      Рассчитываем нашу комиссию ( 140 руб. за банку, если банок
+                      более 70, то 120 рублей за банку). Комиссия всегда не
+                      менее 1300 руб.
+                    </p>
+                  </li>
+                  <li class="stages-block__item">
+                    <div class="stages-block__icon">
+                      <span class="stages-block__icon-number">3</span>
+                    </div>
+                    <p class="stages-block__text">
+                      Оплачиваете покупку без доставки.
+                    </p>
+                  </li>
+                  <li class="stages-block__item">
+                    <div class="stages-block__icon">
+                      <span class="stages-block__icon-number">5</span>
+                    </div>
+                    <p class="stages-block__text">
+                      Посылка приезжает на склад, ее взвесят и сообщат точную
+                      цены доставки.
+                    </p>
+                  </li>
+                  <li class="stages-block__item">
+                    <div class="stages-block__icon">
+                      <span class="stages-block__icon-number">6</span>
+                    </div>
+                    <p class="stages-block__text">
+                      Оплачиваете доставку и ждёте ее в РФ 🙂
+                    </p>
+                  </li>
+                </ul>
+                <div class="stages-block__pagination pagination-stages-block">
+                  <div class="pagination-stages-block__item"></div>
+                  <div class="pagination-stages-block__item"></div>
+                  <div class="pagination-stages-block__item"></div>
+                  <div class="pagination-stages-block__item"></div>
+                  <div class="pagination-stages-block__item"></div>
+                  <div class="pagination-stages-block__item"></div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div> -->
 
         <!-- <section class="page__reviews reviews">
-            <div class="reviews__container">
-                
-            
+          <div class="reviews__container">
             <h2 class="reviews__sub-title sub-title">Отзывы</h2>
             <div class="reviews__body">
-                <div class="reviews__text-box text-box-reviews">
-                    <p class="text-box-reviews__info">Арсений, Нижний Новгород</p>
-                    <p class="text-box-reviews__text">
-                        Не устану благодарить компанию “Быстрики”! Благодаря им, я заказал нужные БАДы во время и успешно их принимаю. Спасибо!💙
-                    </p>
-                    <time class="text-box-reviews__date" datetime="2022-01-22">22.01.2022</time>
-                </div>
-                <div class="reviews__slider reviews-slider swiper">
-                    <div class="reviews-slider__wrapper swiper-wrapper">
-                        <div class="reviews-slider__slide swiper-slide">
-                            <div class="review">
-                                <div class="review__shadow"></div>
-                                <img class="review__image" data-src="@img/general/mockup/mockup-image_1.png" alt="image">
-                                <div class="review__panel panel-review">
-                                    <div class="panel-review__body">
-                                        <p class="panel-review__text">Нажмите, чтобы посмотреть видео-отзыв!</p>
-                                        <button class="panel-review__button" type="button">Открыть</button>
-                                    </div>
-                                    <div class="panel-review__bottom">
-                                        <div class="small-logo">
-                                            <img class="small-logo__image" data-src="@img/svg/logo_sm.svg" alt="image">
-                                            <div class="small-logo__inner">
-                                                <p class="small-logo__selected-text">Powered by</p>
-                                                <p class="small-logo__text">Быстрики</p>
-                                            </div>
-                                        </div>
-                                        <a href="#" class="link-youtube">
-                                            <img class="link-youtube__icon-image" data-src="@img/svg/youtube.svg" alt="image">
-                                            <p class="link-youtube__text">Youtube</p>
-                                            <span class="link-youtube__icon _icon-arrow_short"></span>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
+              <div class="reviews__text-box text-box-reviews">
+                <p class="text-box-reviews__info">Арсений, Нижний Новгород</p>
+                <p class="text-box-reviews__text">
+                  Не устану благодарить компанию “Быстрики”! Благодаря им, я
+                  заказал нужные БАДы во время и успешно их принимаю. Спасибо!💙
+                </p>
+                <time class="text-box-reviews__date" datetime="2022-01-22"
+                  >22.01.2022</time
+                >
+              </div>
+              <div class="reviews__slider reviews-slider swiper">
+                <div class="reviews-slider__wrapper swiper-wrapper">
+                  <div class="reviews-slider__slide swiper-slide">
+                    <div class="review">
+                      <div class="review__shadow"></div>
+                      <img
+                        class="review__image"
+                        data-src="@img/general/mockup/mockup-image_1.png"
+                        alt="image"
+                      />
+                      <div class="review__panel panel-review">
+                        <div class="panel-review__body">
+                          <p class="panel-review__text">
+                            Нажмите, чтобы посмотреть видео-отзыв!
+                          </p>
+                          <button class="panel-review__button" type="button">
+                            Открыть
+                          </button>
                         </div>
-                        <div class="reviews-slider__slide swiper-slide">
-                            <div class="review">
-                                <div class="review__shadow"></div>
-                                <img class="review__image" data-src="@img/general/mockup/mockup-image_1.png" alt="image">
-                                <div class="review__panel panel-review">
-                                    <div class="panel-review__body">
-                                        <p class="panel-review__text">Нажмите, чтобы посмотреть видео-отзыв!</p>
-                                        <button class="panel-review__button" type="button">Открыть</button>
-                                    </div>
-                                    <div class="panel-review__bottom">
-                                        <div class="small-logo">
-                                            <img class="small-logo__image" data-src="@img/svg/logo_sm.svg" alt="image">
-                                            <div class="small-logo__inner">
-                                                <p class="small-logo__selected-text">Powered by</p>
-                                                <p class="small-logo__text">Быстрики</p>
-                                            </div>
-                                        </div>
-                                        <a href="#" class="link-youtube">
-                                            <img class="link-youtube__icon-image" data-src="@img/svg/youtube.svg" alt="image">
-                                            <p class="link-youtube__text">Youtube</p>
-                                            <span class="link-youtube__icon _icon-arrow_short"></span>
-                                        </a>
-                                    </div>
-                                </div>
+                        <div class="panel-review__bottom">
+                          <div class="small-logo">
+                            <img
+                              class="small-logo__image"
+                              data-src="@img/svg/logo_sm.svg"
+                              alt="image"
+                            />
+                            <div class="small-logo__inner">
+                              <p class="small-logo__selected-text">
+                                Powered by
+                              </p>
+                              <p class="small-logo__text">Быстрики</p>
                             </div>
+                          </div>
+                          <a href="#" class="link-youtube">
+                            <img
+                              class="link-youtube__icon-image"
+                              data-src="@img/svg/youtube.svg"
+                              alt="image"
+                            />
+                            <p class="link-youtube__text">Youtube</p>
+                            <span
+                              class="link-youtube__icon _icon-arrow_short"
+                            ></span>
+                          </a>
                         </div>
-                        <div class="reviews-slider__slide swiper-slide">
-                            <div class="review">
-                                <div class="review__shadow"></div>
-                                <img class="review__image" data-src="@img/general/mockup/mockup-image_1.png" alt="image">
-                                <div class="review__panel panel-review">
-                                    <div class="panel-review__body">
-                                        <p class="panel-review__text">Нажмите, чтобы посмотреть видео-отзыв!</p>
-                                        <button class="panel-review__button" type="button">Открыть</button>
-                                    </div>
-                                    <div class="panel-review__bottom">
-                                        <div class="small-logo">
-                                            <img class="small-logo__image" data-src="@img/svg/logo_sm.svg" alt="image">
-                                            <div class="small-logo__inner">
-                                                <p class="small-logo__selected-text">Powered by</p>
-                                                <p class="small-logo__text">Быстрики</p>
-                                            </div>
-                                        </div>
-                                        <a href="#" class="link-youtube">
-                                            <img class="link-youtube__icon-image" data-src="@img/svg/youtube.svg" alt="image">
-                                            <p class="link-youtube__text">Youtube</p>
-                                            <span class="link-youtube__icon _icon-arrow_short"></span>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                </div>
-                <div class="reviews-slider-controls">
-                    <button type="button" class="reviews-slider-controls__button-prev _icon-arrow_long"></button>
-                    <div class="reviews-slider-controls__pagination swiper-pagination"></div>
-                    <button type="button" class="reviews-slider-controls__button-next _icon-arrow_long"></button>
-                </div>
-            </div>
-        </div>
-        </section> -->
-        <section class="page__order-form order-form">
-            <div class="order-form__container">
-                <h2 class="order-form__sub-title sub-title">Хотели бы оформить заказ или задать вопрос?</h2>
-                <p class="order-form__text">
-                    Оставьте заявку, мы свяжемся с вами 
-                   <br>
-                    и проконсультируем по любым вопросам 🥰</p>
-                <form class="order-form__form submission-form" action="#" method="post" name="submission-form">
-                    <div class="submission-form__body">
-                      <label class="submission-form__label">
-                        <span class="submission-form__label-text"> Имя </span>
-                        <input
-                          autocomplete="off"
-                          type="text"
-                          name="name"
-                          data-error="Ошибка"
-                          placeholder="Введите имя"
-                          class="submission-form__field"
-                        />
-                      </label>
-                      <label class="submission-form__label">
-                        <span class="submission-form__label-text"> Телефон </span>
-                        <input
-                          autocomplete="off"
-                          type="tel"
-                          name="phone-number"
-                          data-error="Ошибка"
-                          placeholder="Введите телефон"
-                          class="submission-form__field"
-                        />
-                      </label>
-                      <label class="submission-form__label">
-                        <span class="submission-form__label-text">Комментарий</span>
-                        <textarea
-                          class="submission-form__field"
-                          placeholder="Оставьте комментарий"
-                          name="comment"
-                          cols="10"
-                          rows="2"
-                        ></textarea>
-                      </label>
-                      <div class="checkbox checkbox_submission-form">
-                        <input
-                          id="c_1"
-                          data-error="Ошибка"
-                          class="checkbox__input"
-                          type="checkbox"
-                          value="1"
-                          name="form[submission-form]"
-                        />
-                        <label for="c_1" class="checkbox__label"
-                          ><span class="checkbox__text checkbox__text_submission-form"
-                            >Даю согласие на обработку персональных данных</span
-                          ></label
-                        >
                       </div>
                     </div>
-                    <button
-                      type="submit"
-                      class="button button_primary submission-form__button _icon-arrow_medium"
-                    >
-                      <span>Отправить</span>
-                    </button>
-                  </form>
-                <ul class="order-form__social-list social-list">
-                    <li class="social-list__item">
-                        <a href="#" class="social-list__link">
-                          <img
-                            class="social-list__icon"
-                            src="@img/svg/instagram.svg"
-                            alt="icon social"
-                          />
-                        </a>
-                      </li>
-                    <li class="social-list__item">
-                      <a href="#" class="social-list__link">
-                        <img
-                          class="social-list__icon"
-                          src="@img/svg/telegram.svg"
-                          alt="icon social"
-                        />
-                      </a>
-                    </li>
-                    <li class="social-list__item">
-                        <a href="#" class="social-list__link">
-                          <img
-                            class="social-list__icon"
-                            src="@img/svg/whatsapp.svg"
-                            alt="icon social"
-                          />
-                        </a>
-                      </li>
-                  </ul>
+                  </div>
+                  <div class="reviews-slider__slide swiper-slide">
+                    <div class="review">
+                      <div class="review__shadow"></div>
+                      <img
+                        class="review__image"
+                        data-src="@img/general/mockup/mockup-image_1.png"
+                        alt="image"
+                      />
+                      <div class="review__panel panel-review">
+                        <div class="panel-review__body">
+                          <p class="panel-review__text">
+                            Нажмите, чтобы посмотреть видео-отзыв!
+                          </p>
+                          <button class="panel-review__button" type="button">
+                            Открыть
+                          </button>
+                        </div>
+                        <div class="panel-review__bottom">
+                          <div class="small-logo">
+                            <img
+                              class="small-logo__image"
+                              data-src="@img/svg/logo_sm.svg"
+                              alt="image"
+                            />
+                            <div class="small-logo__inner">
+                              <p class="small-logo__selected-text">
+                                Powered by
+                              </p>
+                              <p class="small-logo__text">Быстрики</p>
+                            </div>
+                          </div>
+                          <a href="#" class="link-youtube">
+                            <img
+                              class="link-youtube__icon-image"
+                              data-src="@img/svg/youtube.svg"
+                              alt="image"
+                            />
+                            <p class="link-youtube__text">Youtube</p>
+                            <span
+                              class="link-youtube__icon _icon-arrow_short"
+                            ></span>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="reviews-slider__slide swiper-slide">
+                    <div class="review">
+                      <div class="review__shadow"></div>
+                      <img
+                        class="review__image"
+                        data-src="@img/general/mockup/mockup-image_1.png"
+                        alt="image"
+                      />
+                      <div class="review__panel panel-review">
+                        <div class="panel-review__body">
+                          <p class="panel-review__text">
+                            Нажмите, чтобы посмотреть видео-отзыв!
+                          </p>
+                          <button class="panel-review__button" type="button">
+                            Открыть
+                          </button>
+                        </div>
+                        <div class="panel-review__bottom">
+                          <div class="small-logo">
+                            <img
+                              class="small-logo__image"
+                              data-src="@img/svg/logo_sm.svg"
+                              alt="image"
+                            />
+                            <div class="small-logo__inner">
+                              <p class="small-logo__selected-text">
+                                Powered by
+                              </p>
+                              <p class="small-logo__text">Быстрики</p>
+                            </div>
+                          </div>
+                          <a href="#" class="link-youtube">
+                            <img
+                              class="link-youtube__icon-image"
+                              data-src="@img/svg/youtube.svg"
+                              alt="image"
+                            />
+                            <p class="link-youtube__text">Youtube</p>
+                            <span
+                              class="link-youtube__icon _icon-arrow_short"
+                            ></span>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="reviews-slider-controls">
+                <button
+                  type="button"
+                  class="reviews-slider-controls__button-prev _icon-arrow_long"
+                ></button>
+                <div
+                  class="reviews-slider-controls__pagination swiper-pagination"
+                ></div>
+                <button
+                  type="button"
+                  class="reviews-slider-controls__button-next _icon-arrow_long"
+                ></button>
+              </div>
             </div>
-        </section>
+          </div>
+        </section> -->
+        <!-- <section class="page__order-form order-form">
+          <div class="order-form__container">
+            <div class="order-form__shadow-element shadow-element"></div>
+
+            <h2 class="order-form__sub-title sub-title">
+              Хотели бы оформить заказ или задать вопрос?
+            </h2>
+            <p class="order-form__text">
+              Оставьте заявку, мы свяжемся с вами
+              <br />
+              и проконсультируем по любым вопросам 🥰
+            </p>
+            <form
+              class="order-form__form submission-form"
+              action="#"
+              method="post"
+              name="submission-form"
+            >
+              <div class="submission-form__body">
+                <label class="submission-form__label">
+                  <span class="submission-form__label-text"> Имя </span>
+                  <input
+                    autocomplete="off"
+                    type="text"
+                    name="name"
+                    data-error="Ошибка"
+                    placeholder="Введите имя"
+                    class="submission-form__field"
+                  />
+                </label>
+                <label class="submission-form__label">
+                  <span class="submission-form__label-text"> Телефон </span>
+                  <input
+                    autocomplete="off"
+                    type="tel"
+                    name="phone-number"
+                    data-error="Ошибка"
+                    placeholder="Введите телефон"
+                    class="submission-form__field"
+                  />
+                </label>
+                <label class="submission-form__label">
+                  <span class="submission-form__label-text">Комментарий</span>
+                  <textarea
+                    class="submission-form__field"
+                    placeholder="Оставьте комментарий"
+                    name="comment"
+                    cols="10"
+                    rows="2"
+                  ></textarea>
+                </label>
+                <div class="checkbox checkbox_submission-form">
+                  <input
+                    id="c_1"
+                    data-error="Ошибка"
+                    class="checkbox__input"
+                    type="checkbox"
+                    value="1"
+                    name="form[submission-form]"
+                  />
+                  <label for="c_1" class="checkbox__label"
+                    ><span class="checkbox__text checkbox__text_submission-form"
+                      >Даю согласие на обработку персональных данных</span
+                    ></label
+                  >
+                </div>
+              </div>
+              <button
+                type="submit"
+                class="button button_primary submission-form__button _icon-arrow_medium"
+              >
+                <span>Отправить</span>
+              </button>
+            </form>
+            <ul class="order-form__social-list social-list">
+              <li class="social-list__item">
+                <a href="#" class="social-list__link">
+                  <img
+                    class="social-list__icon"
+                    src="@img/svg/instagram.svg"
+                    alt="icon social"
+                  />
+                </a>
+              </li>
+              <li class="social-list__item">
+                <a href="#" class="social-list__link">
+                  <img
+                    class="social-list__icon"
+                    src="@img/svg/telegram.svg"
+                    alt="icon social"
+                  />
+                </a>
+              </li>
+              <li class="social-list__item">
+                <a href="#" class="social-list__link">
+                  <img
+                    class="social-list__icon"
+                    src="@img/svg/whatsapp.svg"
+                    alt="icon social"
+                  />
+                </a>
+              </li>
+            </ul>
+          </div>
+        </section> -->
       </main>
       @@include('html/_footer.htm',{})
     </div>
