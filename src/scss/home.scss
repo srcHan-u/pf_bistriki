@@ -353,6 +353,7 @@
         align-items: center;
         position: relative;
         overflow-x: hidden;
+        flex-direction: row-reverse;
         @media (max-width: $tablet) {
             flex-direction: column;
         }
@@ -382,6 +383,10 @@
     @include adaptiveValue("font-size", 18, 12);
     line-height: math.div(22, 18);
     color: #71c67f;
+    display: none;
+    &.active {
+        display: block;
+    }
     &__info {
         &:not(:last-child) {
             margin-bottom: em(25, 18);
@@ -389,6 +394,8 @@
     }
     &__text {
         font-weight: 400;
+        max-height: rem(500);
+        overflow-y: auto;
         @include adaptiveValue("font-size", 32, 16);
         line-height: math.div(46, 32);
         color: #fcfcfc;
@@ -422,16 +429,17 @@
 }
 
 .reviews-slider-controls {
-    position: absolute;
-    top: 0;
-    left: 50%;
+    // position: absolute;
+    // top: 0;
+    // left: 50%;
     display: flex;
     align-items: center;
     justify-content: space-between;
     max-width: rem(270);
     width: 100%;
     min-width: rem(200);
-    transform: translateX(-50%);
+    margin: 0 auto;
+    // transform: translateX(-50%);
     &__button-next {
         width: rem(40);
         height: rem(40);
