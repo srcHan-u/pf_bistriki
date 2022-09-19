@@ -137,9 +137,9 @@ function initSliders() {
 
       // Пагинация
       pagination: {
-        el: ".swiper-pagination",
+        // el: ".swiper-pagination",
         type: "fraction",
-        el: ".reviews-slider-controls__pagination",
+        el: ".slider-controls__pagination",
         clickable: true,
       },
       /*
@@ -155,26 +155,27 @@ function initSliders() {
 
       // Кнопки "влево/вправо"
       navigation: {
-        prevEl: ".reviews-slider-controls__button-prev",
-        nextEl: ".reviews-slider-controls__button-next",
+        prevEl: ".slider-controls__button-prev",
+        nextEl: ".slider-controls__button-next",
       },
 
+      breakpoints: {
+      	320: {
+              slidesPerView: 1,
+              autoHeight: true,
+      		spaceBetween: 30,
+      	},
+      	768: {
+      		slidesPerView: 1,
+      		spaceBetween: 50,
+
+      	},
+      	1268: {
+      		slidesPerView: 1.5,
+      		spaceBetween: 50,
+      	},
+      },
       // Брейкпоинты
-      // breakpoints: {
-      // 	320: {
-      //         slidesPerView: 1.25,
-      //         spaceBetween: 17,
-      //         // autoHeight: true,
-      // 	},
-      // 	768: {
-      // 		slidesPerView: 2.5,
-      // 		spaceBetween: 20,
-      // 	},
-      // 	1268: {
-      // 		slidesPerView: 4,
-      // 		spaceBetween: 30,
-      // 	},
-      // },
       // События
       on: {
         init: function () {
