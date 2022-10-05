@@ -71,6 +71,13 @@ body {
     // Скролл заблокирован
     font-weight: 400;
     background-color: $mCBg;
+    &::-webkit-scrollbar {
+        background-color: transparent;
+    }
+    &::-webkit-scrollbar-thumb {
+        border-radius: 15px;
+        background-color: #2f80ed;
+    }
     .lock & {
         overflow: hidden;
         touch-action: none;
