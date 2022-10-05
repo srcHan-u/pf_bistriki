@@ -5,42 +5,7 @@ import { flsModules } from "./modules.js";
 
 import "./scroll/gsap.js";
 
-// import * as ScrollMagic from "../../../node_modules/scrollmagic/scrollmagic/uncompressed/ScrollMagic.js";
 
-// window.addEventListener("load", () => {
-//   const controller = new ScrollMagic.Controller({});
-
-//   const tween = new TimelineMax().add([
-//     TweenMax.to(".stages .order-form", 1, {
-//       backgroundPosition: "-40% 0",
-//       ease: Linear.easeNone,
-//     }),
-//   ]);
-//   new ScrollMagic.Scene({
-//     triggerElement: ".stages",
-//     duration: 2000,
-//     offset: 450,
-//   })
-//     .setTween(tween)
-//     .setPin(".stages")
-//     .addIndicators() // add indicators (requires plugin)
-//     .addTo(controller);
-// });
-
-// class Section{
-//     constructor(element){
-//         this.element = document.querySelector(`.${element}`) ? document.querySelector(`.${element}`) : null;
-//     }
-//     get position(){
-//         return !this.isNull() ? this.element.getBoundingClientRect() : false;
-//     }
-//     set coordinates(coor){
-//         this.coordinates = this.coor;
-//     }
-//     isNull(){
-//         return this.element === null ? true : false;
-//     }
-// }
 
 class Element {
   attribures = [];
@@ -89,47 +54,6 @@ class Element {
 function isEmpty(e) {
   return e === undefined || e === null || e.length === 0 ? true : false;
 }
-const BLOCKS = {
-  // stages: new Section('stages'),
-};
 
-const section = document.querySelector(".stages");
-window.addEventListener("DOMContentLoaded", () => {
-  const backgroundWrapper = new Element("div");
-  backgroundWrapper.createStyle(
-    "position: absolute;",
-    "top: 0;",
-    "left: 0;",
-    "width: 100%;",
-    "height: 100%;",
-    "backgroundColor: red;",
-    "display: none"
-  );
-  backgroundWrapper.setStyle();
-  backgroundWrapper.insertElement(".stages__container");
 
-  backgroundWrapper.element.classList.add("js-background-wrapper");
-  const porm = new Promise((resolve, reject) => {
-    resolve();
-  });
-  window.addEventListener("scroll", () => {
-    if (section.getBoundingClientRect().y <= 50) {
-      porm.then(() => {
-        backgroundWrapper.element.style.display = "block";
-        // document.querySelector("html").classList.add("lock");
-      });
-    } else {
-      porm.then(() => {
-        backgroundWrapper.element.style.display = "none";
-      });
-    }
-  });
-});
 
-const input = new Promise((resolve, reject) => {
-  const input = document.querySelector(".submission-form__field");
-//   console.log(input);
-  resolve(input.value);
-}).then((value) => {
-//   console.log(value);
-});
